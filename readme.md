@@ -18,7 +18,7 @@ Backend
 
 1. Clonar o projeto para a sua pasta de preferência usando
 
-        git clone ''
+        git clone https://github.com/jubilly/projeto-banco-de-dados
 
 2. Para executar o backend, nasta abrir o terminal na pasta onde o projeto foi clonado e executar a cli:
 

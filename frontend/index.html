@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .header {
+        max-width: 100%;
+        background: #fafafa;
+        padding: 20px;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+    }
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+        padding-top: 70px;
+        justify-content: center;
+    }
+
+    .product {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stars svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .product div {
+        margin: auto;
+    }
+
+    .image {
+        width: 90px;
+        height: 90px;
+        border: 1px solid #fafafa;
+        border-radius: 20px;
+    }
+
+    .button {
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        color: #fff;
+        background-color: rgb(40, 125, 30);
+        padding: 10px;
+        font-weight: 600;
+    }
+
+    .disabled {
+        background-color: #ccc;
+        pointer-events: none;
+    }
+
+    .button:hover {
+        background-color: rgb(38, 107, 31);
+    }
+</style>
+<body>
+    <div class="header">
+        <span>Numero de produtos adicionados ao carrinho: <span data-products-qtd>0</span></span>
+    </div>
+    <script src="products.js"></script>
+    <div class="products" data-products>
+        <span></span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ASVIC - Gestão de Seguros Automotivos</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="d-flex">
+      <nav class="sidebar bg-success text-white p-3">
+        <h4 class="text-center">Seguros Auto</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white" data-target="#dashboard"
+              >Dashboard</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white" data-target="#clientes"
+              >Clientes</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white" data-target="#veiculos"
+              >Veículos</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white" data-target="#sinistros"
+              >Sinistros</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white" data-target="#relatorios"
+              >Relatórios</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="main-content p-4 w-100">
+        <div id="dashboard" class="content-section active">
+          <h2>Dashboard</h2>
+          <p>Resumo geral do sistema.</p>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">Clientes Cadastrados</h5>
+                  <p class="card-text">120</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">Veículos Segurados</h5>
+                  <p class="card-text">95</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">Sinistros Registrados</h5>
+                  <p class="card-text">25</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="clientes" class="content-section">
+          <h2>Clientes</h2>
+          <p>Gerencie seus clientes aqui.</p>
+          <form>
+            <div class="mb-3">
+              <label for="client-name" class="form-label">Nome</label>
+              <input
+                type="text"
+                id="client-name"
+                class="form-control"
+                placeholder="Digite o nome do cliente"
+              />
+            </div>
+            <button type="submit" class="btn btn-success">Salvar</button>
+          </form>
+        </div>
+
+        <div id="veiculos" class="content-section">
+          <h2>Veículos</h2>
+          <p>Gerencie informações dos veículos segurados.</p>
+        </div>
+
+        <div id="sinistros" class="content-section">
+          <h2>Sinistros</h2>
+          <p>Registre e acompanhe ocorrências reportadas pelos clientes.</p>
+        </div>
+
+        <div id="relatorios" class="content-section">
+          <h2>Relatórios</h2>
+          <p>Gere relatórios gerenciais e estatísticas.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const links = document.querySelectorAll(".sidebar a");
+      const sections = document.querySelectorAll(".content-section");
+
+      links.forEach((link) => {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+
+          sections.forEach((section) => section.classList.remove("active"));
+
+          const target = document.querySelector(
+            this.getAttribute("data-target")
+          );
+          target.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

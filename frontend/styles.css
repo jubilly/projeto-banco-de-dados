@@ -1,0 +1,45 @@
+/* Menu Lateral */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar .nav-link {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #ff8f00; /* Laranja */
+  color: white;
+}
+
+/* Conteúdo Principal */
+.main-content {
+  margin-left: 250px; /* Largura do menu lateral */
+}
+
+.content-section {
+  display: none; /* Esconde todas as seções inicialmente */
+}
+
+.content-section.active {
+  display: block; /* Mostra apenas a seção ativa */
+}
+
+/* Cartões do Dashboard */
+.card {
+  border: none;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

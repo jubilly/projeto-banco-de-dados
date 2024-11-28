@@ -1,88 +1,181 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce</title>
-</head>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .header {
-        max-width: 100%;
-        background: #fafafa;
-        padding: 20px;
-        text-align: center;
-        position: fixed;
-        width: 100%;
-    }
-    .products {
-        display: flex;
-        flex-wrap: wrap;
-        width: 90%;
-        margin: auto;
-        padding-top: 70px;
-        justify-content: center;
-    }
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASVIC - Proteção Veicular</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Raleway", sans-serif;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <div class="flex">
+      <!-- Sidebar -->
+      <aside class="w-1/5 bg-blue-900 text-white min-h-screen p-5">
+        <h1 class="text-3xl font-bold mb-8">ASVIC</h1>
+        <nav>
+          <ul>
+            <li class="mb-4">
+              <button
+                onclick="showSection('relatorio')"
+                class="hover:text-yellow-400 w-full text-left"
+              >
+                Relatório
+              </button>
+            </li>
+            <li class="mb-4">
+              <button
+                onclick="showSection('associado')"
+                class="hover:text-yellow-400 w-full text-left"
+              >
+                Associados
+              </button>
+            </li>
+            <li class="mb-4">
+              <button
+                onclick="showSection('veiculo')"
+                class="hover:text-yellow-400 w-full text-left"
+              >
+                Veículos
+              </button>
+            </li>
+            <li class="mb-4">
+              <button
+                onclick="showSection('ocorrencia')"
+                class="hover:text-yellow-400 w-full text-left"
+              >
+                Ocorrências
+              </button>
+            </li>
+            <li class="mb-4">
+              <button
+                onclick="showSection('oficina')"
+                class="hover:text-yellow-400 w-full text-left"
+              >
+                Oficinas
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </aside>
 
-    .product {
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        text-align: center;
-        padding: 10px;
-        margin: 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
+      <!-- Main Content -->
+      <main class="flex-1 p-10">
+        <!-- Relatório -->
+        <div id="relatorio" class="bg-white shadow-md rounded-lg p-6">
+          <h2 class="text-2xl font-bold mb-4">Relatório do Sistema</h2>
+          <p>Exibindo dados mais recentes do banco de dados...</p>
+          <div id="relatorio-conteudo">
+            <!-- Relatório gerado via JavaScript -->
+          </div>
+        </div>
 
-    .stars svg {
-        width: 20px;
-        height: 20px;
-    }
+        <!-- Associados -->
+        <div id="associado" class="bg-white shadow-md rounded-lg p-6 hidden">
+          <h2 class="text-2xl font-bold mb-4">Associados</h2>
+          <form id="form-associado">
+            <div class="mb-4">
+              <label class="block text-sm font-medium">Nome</label>
+              <input
+                type="text"
+                class="border border-gray-300 p-2 rounded w-full"
+              />
+            </div>
+            <button
+              class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              Registrar Associado
+            </button>
+          </form>
+        </div>
 
-    .product div {
-        margin: auto;
-    }
+        <!-- Veículos -->
+        <div id="veiculo" class="bg-white shadow-md rounded-lg p-6 hidden">
+          <h2 class="text-2xl font-bold mb-4">Veículos</h2>
+          <form id="form-veiculo">
+            <div class="mb-4">
+              <label class="block text-sm font-medium">Placa</label>
+              <input
+                type="text"
+                class="border border-gray-300 p-2 rounded w-full"
+              />
+            </div>
+            <button
+              class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              Registrar Veículo
+            </button>
+          </form>
+        </div>
 
-    .image {
-        width: 90px;
-        height: 90px;
-        border: 1px solid #fafafa;
-        border-radius: 20px;
-    }
+        <!-- Ocorrências -->
+        <div id="ocorrencia" class="bg-white shadow-md rounded-lg p-6 hidden">
+          <h2 class="text-2xl font-bold mb-4">Ocorrências</h2>
+          <form id="form-ocorrencia">
+            <div class="mb-4">
+              <label class="block text-sm font-medium">Descrição</label>
+              <textarea
+                class="border border-gray-300 p-2 rounded w-full"
+              ></textarea>
+            </div>
+            <button
+              class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              Registrar Ocorrência
+            </button>
+          </form>
+        </div>
 
-    .button {
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        color: #fff;
-        background-color: rgb(40, 125, 30);
-        padding: 10px;
-        font-weight: 600;
-    }
-
-    .disabled {
-        background-color: #ccc;
-        pointer-events: none;
-    }
-
-    .button:hover {
-        background-color: rgb(38, 107, 31);
-    }
-</style>
-<body>
-    <div class="header">
-        <span>Numero de produtos adicionados ao carrinho: <span data-products-qtd>0</span></span>
+        <!-- Oficinas -->
+        <div id="oficina" class="bg-white shadow-md rounded-lg p-6 hidden">
+          <h2 class="text-2xl font-bold mb-4">Oficinas</h2>
+          <p>Lista de oficinas credenciadas...</p>
+          <ul>
+            <li>Oficina A - <span class="text-yellow-500">3 veículos</span></li>
+            <li>Oficina B - <span class="text-yellow-500">5 veículos</span></li>
+          </ul>
+        </div>
+      </main>
     </div>
-    <script src="products.js"></script>
-    <div class="products" data-products>
-        <span></span>
-    </div>
-</body>
+
+    <!-- JavaScript -->
+    <script>
+      function showSection(sectionId) {
+        // Esconde todas as seções
+        document
+          .querySelectorAll("main > div")
+          .forEach((div) => div.classList.add("hidden"));
+        // Mostra a seção selecionada
+        document.getElementById(sectionId).classList.remove("hidden");
+      }
+
+      // Função para carregar relatório ao iniciar
+      function loadRelatorio() {
+        const relatorioContent = document.getElementById("relatorio-conteudo");
+        // Simula consulta ao banco (substituir por requisição real ao backend)
+        const mockData = `
+        <ul class="list-disc pl-5">
+          <li>Total de Associados: 120</li>
+          <li>Total de Veículos: 200</li>
+          <li>Total de Ocorrências: 35</li>
+          <li>Total de Oficinas Credenciadas: 8</li>
+        </ul>
+      `;
+        relatorioContent.innerHTML = mockData;
+      }
+
+      // Carrega relatório inicial ao abrir a página
+      window.onload = loadRelatorio;
+    </script>
+  </body>
 </html>

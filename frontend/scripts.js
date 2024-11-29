@@ -1,21 +1,20 @@
-(function() {
-    // const endpoint = 'http://localhost:5000';
-    const endpoint = 'http://_API_ADDRESS_:5000';
-    const getProducts = async () => {
-        
-        try {
-            const url = `${endpoint}/products`;
-            const response = await fetch(url);
-            const products = await response.json();
-            return products;
-        } catch {
-            return undefined;
-        }
-        
-    }
+(function () {
+  // const endpoint = 'http://localhost:5000';
+  const endpoint = "http://_API_ADDRESS_:5000";
 
-    const productImg = () => {
-        return `
+  const getProducts = async () => {
+    try {
+      const url = `${endpoint}/products`;
+      const response = await fetch(url);
+      const products = await response.json();
+      return products;
+    } catch {
+      return undefined;
+    }
+  };
+
+  const productImg = () => {
+    return `
             <?xml version="1.0" encoding="iso-8859-1"?>
             <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -46,10 +45,10 @@
             </g>
             </svg>
         `;
-    }
+  };
 
-    const productImgVariant = () => {
-        return `
+  const productImgVariant = () => {
+    return `
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" viewBox="0 0 512 512" xml:space="preserve">
                 <path style="fill:#A2001D;" d="M482.327,77.913l-8.617-15.51l-15.288,9.008c-2.12,1.249-52.429,31.207-96.891,84.56  c-25.821,30.984-44.906,61.954-61.747,89.279c-20.927,33.956-38.999,63.282-62.82,80.873c-10.152,7.497-19.508,10.335-28.596,8.675  c-17.366-3.172-29.418-21.556-29.487-21.662l-9.462-15.021L10.945,403.763c-9.062,6.042-13.03,17.105-9.873,27.529  c3.157,10.424,12.594,17.427,23.485,17.427H274.33c32.316,0,61.817-19.012,75.156-48.437c11.555-25.485,23.145-48.919,34.451-69.65  c19.516-35.786,39.227-48.37,52.345-52.63v171.594h34.598V269.452c8.204-6.697,22.571-20.887,32.068-44.071  C524.454,172.885,503.604,116.212,482.327,77.913z"/>
                 <path style="fill:#6C0014;" d="M482.327,77.913l-8.617-15.51l-15.288,9.008c-2.12,1.249-52.429,31.207-96.891,84.56  c-25.821,30.984-44.906,61.954-61.747,89.279c-15.005,24.347-28.544,46.312-43.785,63.28v140.19h18.33  c32.316,0,61.817-19.012,75.156-48.437c11.555-25.485,23.145-48.919,34.451-69.65c19.516-35.786,39.227-48.37,52.345-52.63v171.594  h34.598V269.452c8.204-6.697,22.571-20.887,32.068-44.071C524.454,172.885,503.604,116.212,482.327,77.913z"/>
@@ -57,10 +56,10 @@
                 <rect x="436.286" y="414.996" width="34.598" height="34.598"/>
             </svg>
         `;
-    }
+  };
 
-    const productImgExtra = () => {
-        return `
+  const productImgExtra = () => {
+    return `
             <?xml version="1.0" encoding="iso-8859-1"?>
             <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -84,10 +83,10 @@
             <rect x="259.16" y="316.049" style="fill:#FFE98F;" width="126.42" height="37.926"/>
             </svg>
         `;
-    }
+  };
 
-    const rating = () => {
-        return `
+  const rating = () => {
+    return `
             <svg height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                 viewBox="0 0 47.94 47.94" xml:space="preserve">
                 <path style="fill:#ED8A19;" d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757
@@ -97,66 +96,72 @@
                 c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956
                 C22.602,0.567,25.338,0.567,26.285,2.486z"/>
             </svg>
-            `
+            `;
+  };
+
+  const handleCountCartItems = () => {
+    let count = 0;
+    const countElement = document.querySelector("[data-products-qtd]");
+    document.addEventListener("cart-updated", (event) => {
+      const { detail } = event;
+      count = count + detail.item;
+      if (typeof count === "number") {
+        countElement.innerHTML = count;
+      }
+    });
+  };
+
+  async function handleAddToCart(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+
+    if (data.stock == 0) {
+      alert("Produto fora de estoque.");
+      return;
     }
 
-    const handleCountCartItems = () => {
-        let count = 0;
-        const countElement = document.querySelector('[data-products-qtd]');
-        document.addEventListener('cart-updated', (event) => {
-            const { detail } = event;
-            count = count + detail.item;
-            if (typeof count === 'number') {
-                countElement.innerHTML = count;
-            }
+    const url = `${endpoint}/addToCart`;
+    const body = {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    };
+    const response = await fetch(url, body);
+    const result = await response.json();
+    if (result.status === "product_added_to_cart") {
+      document.dispatchEvent(
+        new CustomEvent("cart-updated", {
+          bubbles: true,
+          detail: {
+            item: 1,
+          },
         })
+      );
+      rerenderPage();
+      return;
     }
 
-    async function handleAddToCart (event) {
-        event.preventDefault();
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData.entries());
-
-        if (data.stock == 0) {
-            alert('Produto fora de estoque.');
-            return;
-        }
-
-        const url = `${endpoint}/addToCart`;
-        const body = {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data), 
-        }
-        const response = await fetch(url, body);
-        const result = await response.json();
-        if (result.status === "product_added_to_cart") {
-            document.dispatchEvent(new CustomEvent('cart-updated', {
-                bubbles: true,
-                detail: {
-                    item: 1
-                }
-            }))
-            rerenderPage();
-            return;
-        }
-
-        if (result.status === 'product_out_of_stock') {
-            alert('Produto fora de estoque.');
-            return;
-        }
-
+    if (result.status === "product_out_of_stock") {
+      alert("Produto fora de estoque.");
+      return;
     }
+  }
 
-    const createProductItem = (product) => {
-        let stars = '';
-        for (let i=0; i < 5; i++) {
-            stars = stars + rating();
-        }
-        const image = product.id <= 5 ? productImg() : product.id <= 7 ? productImgVariant() : productImgExtra();
-        return `
+  const createProductItem = (product) => {
+    let stars = "";
+    for (let i = 0; i < 5; i++) {
+      stars = stars + rating();
+    }
+    const image =
+      product.id <= 5
+        ? productImg()
+        : product.id <= 7
+        ? productImgVariant()
+        : productImgExtra();
+    return `
             <div class="product">
                 <div class="image">
                     ${image}
@@ -166,8 +171,9 @@
                 <div class="price"><p>R$${product.price}</p></div>
                 <div class="stock"><p>Unidades: ${product.stock}</p></div>
                 <div class="description"><p>${product.description}</p></div>
-                    ${product.stock > 0 ? 
-                    `
+                    ${
+                      product.stock > 0
+                        ? `
                         <form data-id='${product.id}'>
                             <input type="hidden" name="quantity" value="1">
                             <input type="hidden" name="id" value='${product.id}'>
@@ -177,9 +183,8 @@
                                 Adicionar ao carrinho
                             </button>
                         </form>
-                    ` 
-                    :
-                        `
+                    `
+                        : `
                         <button class="button disabled" type="button">
                             Fora de estoque
                         </button>
@@ -188,55 +193,55 @@
 
             </div>
         `;
-    }
+  };
 
-    function convertToHTML (element) {
-        const parsedHTML = new DOMParser().parseFromString(element, 'text/html')
-        return parsedHTML.body.firstChild;
-    }
+  function convertToHTML(element) {
+    const parsedHTML = new DOMParser().parseFromString(element, "text/html");
+    return parsedHTML.body.firstChild;
+  }
 
-    function emptySate () {
-        return `
+  function emptySate() {
+    return `
             <div class="empty-state">
                 <h1>
                     Que pena, nossos produtos acabaram no nosso queimão de estoques! Você perdeu... Fique de olho nas nossas redes sociais para mais promoções @amandapratesc
                 </h1>
             </div>
         `;
-    }
-    
-    const handleProducts = async () => {
-        const products = await getProducts();
-        
-        if (!products) {
-            const htmlDiv = document.querySelector('div[data-products]');
-            const empty = emptySate();
-            const parsedHTML = convertToHTML(empty);
-            htmlDiv.appendChild(parsedHTML)
-            return;
-        };
-        
-        products.forEach(product => {
-            const productItem = createProductItem(product);
-            const htmlDiv = document.querySelector('div[data-products]');
+  }
 
-            htmlDiv.appendChild(convertToHTML(productItem));
+  const handleProducts = async () => {
+    const products = await getProducts();
 
-            const formOnSubmit = document.querySelector(`form[data-id='${product.id}']`);
-            formOnSubmit && formOnSubmit.addEventListener('submit', handleAddToCart)
-        });
+    if (!products) {
+      const htmlDiv = document.querySelector("div[data-products]");
+      const empty = emptySate();
+      const parsedHTML = convertToHTML(empty);
+      htmlDiv.appendChild(parsedHTML);
+      return;
     }
 
-    const rerenderPage = () => {
-        const htmlDiv = document.querySelector('div[data-products]');
-        htmlDiv.innerHTML = '';
-        handleProducts();
+    products.forEach((product) => {
+      const productItem = createProductItem(product);
+      const htmlDiv = document.querySelector("div[data-products]");
 
-    }
+      htmlDiv.appendChild(convertToHTML(productItem));
 
-    document.addEventListener('DOMContentLoaded', () => {
-        handleProducts();
-        handleCountCartItems();
-    })
+      const formOnSubmit = document.querySelector(
+        `form[data-id='${product.id}']`
+      );
+      formOnSubmit && formOnSubmit.addEventListener("submit", handleAddToCart);
+    });
+  };
 
+  const rerenderPage = () => {
+    const htmlDiv = document.querySelector("div[data-products]");
+    htmlDiv.innerHTML = "";
+    handleProducts();
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    handleProducts();
+    handleCountCartItems();
+  });
 })();

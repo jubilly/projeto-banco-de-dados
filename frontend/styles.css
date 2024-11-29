@@ -7,6 +7,13 @@
   left: 0;
 }
 
+body {
+  font-family: "Raleway", sans-serif;
+}
+.hidden {
+  display: none;
+}
+
 .sidebar .nav-link {
   margin: 10px 0;
   padding: 10px;

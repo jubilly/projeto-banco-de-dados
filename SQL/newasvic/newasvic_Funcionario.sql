@@ -19,10 +19,10 @@
 -- Table structure for table `Funcionario`
 --
 
-DROP TABLE IF EXISTS `Funcionario`;
+DROP TABLE IF EXISTS `FuncionarioSeguradora`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Funcionario` (
+CREATE TABLE `FuncionarioSeguradora` (
   `matriculaFuncionario` varchar(6) NOT NULL,
   `nome` varchar(60) DEFAULT NULL,
   `tipo` enum('EVENTOS','ATENDIMENTO') DEFAULT NULL,
@@ -35,9 +35,9 @@ CREATE TABLE `Funcionario` (
 -- Dumping data for table `Funcionario`
 --
 
-LOCK TABLES `Funcionario` WRITE;
+LOCK TABLES `FuncionarioSeguradora` WRITE;
 /*!40000 ALTER TABLE `Funcionario` DISABLE KEYS */;
-INSERT INTO `Funcionario` VALUES ('F00001','Roberto Martins','ATENDIMENTO',NULL,'MG1234567'),('F00002','Fernanda Lima','EVENTOS','98765432101',NULL),('F00003','Lucas Pereira','ATENDIMENTO',NULL,'SP2345678'),('F00004','Juliana Alves','EVENTOS','87654321012',NULL),('F00005','Thiago Souza','ATENDIMENTO',NULL,'RJ3456789'),('F00006','Camila Ferreira','EVENTOS','76543210923',NULL),('F00007','André Nunes','ATENDIMENTO',NULL,'PR4567890'),('F00008','Patricia Ramos','EVENTOS','65432109834',NULL),('F00009','Ricardo Mendes','ATENDIMENTO',NULL,'RS5678901'),('F00010','Mariana Costa','EVENTOS','54321098745',NULL);
+INSERT INTO `FuncionarioSeguradora` VALUES ('F00001','Roberto Martins','ATENDIMENTO',NULL,'MG1234567'),('F00002','Fernanda Lima','EVENTOS','98765432101',NULL),('F00003','Lucas Pereira','ATENDIMENTO',NULL,'SP2345678'),('F00004','Juliana Alves','EVENTOS','87654321012',NULL),('F00005','Thiago Souza','ATENDIMENTO',NULL,'RJ3456789'),('F00006','Camila Ferreira','EVENTOS','76543210923',NULL),('F00007','André Nunes','ATENDIMENTO',NULL,'PR4567890'),('F00008','Patricia Ramos','EVENTOS','65432109834',NULL),('F00009','Ricardo Mendes','ATENDIMENTO',NULL,'RS5678901'),('F00010','Mariana Costa','EVENTOS','54321098745',NULL);
 /*!40000 ALTER TABLE `Funcionario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

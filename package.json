@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "description": "Projeto para disciplina de banco de dados do curso de pós-graduação em desenvolvimento web do ifba Vitória da Conquista",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "backend:start": "cd ./backend && npm install && node ./app/index.js",
-    "frontend:start": "cd ./frontend && npm install && npx http-server -p 3000"
+    "frontend:start": "cd ./frontend && npm install && npx http-server -p 3000",
+    "sql:create:db": "node ./NovoBD/createDB.js"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mysql": "^2.18.1"
+  }
 }

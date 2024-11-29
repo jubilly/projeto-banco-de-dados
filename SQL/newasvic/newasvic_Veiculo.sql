@@ -30,7 +30,7 @@ CREATE TABLE `Veiculo` (
   `numero_motor` varchar(15) DEFAULT NULL,
   `codigo_fipe` varchar(7) DEFAULT NULL,
   `mensalidade` decimal(5,2) DEFAULT NULL,
-  `matricula_funcionario` varchar(6),
+  `matriculaFuncionario` varchar(6),
   `codigo_modelo` int,
   `nome_modelo` varchar(50) DEFAULT NULL,
   `tipo_modelo` enum('CARRO','MOTO','CAMINHAO') DEFAULT NULL,

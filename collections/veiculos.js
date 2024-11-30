@@ -1,4 +1,4 @@
-use asvic;
+use ('asvic');
 
 db.veiculos.insertMany(
   [
@@ -20,7 +20,13 @@ db.veiculos.insertMany(
       "Numero": 123,
       "Bairro": "Bairro A",
       "Logradouro": "Rua A",
-      "Complemento": "Apto 101"
+      "Complemento": "Apto 101",
+      "ocorrencias": [
+        {
+          "Protocolo": 1001,
+          "fk_Veiculo_Chassi": "1HGBH41JXMN109186"
+        }
+      ]
     },
     {
       "Chassi": "2HGBH41JXMN109187",
@@ -40,7 +46,13 @@ db.veiculos.insertMany(
       "Numero": 456,
       "Bairro": "Bairro B",
       "Logradouro": "Avenida B",
-      "Complemento": "Casa"
+      "Complemento": "Casa",
+      "ocorrencias": [
+        {
+          "Protocolo": 1002,
+          "fk_Veiculo_Chassi": "2HGBH41JXMN109187"
+        }
+      ]
     },
     {
       "Chassi": "3HGBH41JXMN109188",
@@ -60,7 +72,13 @@ db.veiculos.insertMany(
       "Numero": 789,
       "Bairro": "Bairro C",
       "Logradouro": "Rua C",
-      "Complemento": "Sala 1"
+      "Complemento": "Sala 1",
+      "ocorrencias": [
+        {
+          "Protocolo": 1003,
+          "fk_Veiculo_Chassi": "3HGBH41JXMN109188"
+        }
+      ]
     },
     {
       "Chassi": "4HGBH41JXMN109189",
@@ -80,7 +98,13 @@ db.veiculos.insertMany(
       "Numero": 101,
       "Bairro": "Bairro D",
       "Logradouro": "Avenida D",
-      "Complemento": "Cobertura"
+      "Complemento": "Cobertura",
+      "ocorrencias": [
+        {
+          "Protocolo": 1004,
+          "fk_Veiculo_Chassi": "4HGBH41JXMN109189"
+        }
+      ]
     },
     {
       "Chassi": "5HGBH41JXMN109190",
@@ -100,7 +124,13 @@ db.veiculos.insertMany(
       "Numero": 202,
       "Bairro": "Bairro E",
       "Logradouro": "Rua E",
-      "Complemento": "Apto 202"
+      "Complemento": "Apto 202",
+      "ocorrencias": [
+        {
+          "Protocolo": 1005,
+          "fk_Veiculo_Chassi": "5HGBH41JXMN109190"
+        }
+      ]
     }
   ]
 );

@@ -1,4 +1,4 @@
-use (asvic);
+use ('asvic');
 db.ocorrencias.insertMany(
   [
     {

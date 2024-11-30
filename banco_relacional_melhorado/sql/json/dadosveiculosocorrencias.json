@@ -1,0 +1,38 @@
+[
+	{
+		"Protocolo" : 1001,
+		"fk_Veiculo_Chassi" : "1HGBH41JXMN109186"
+	},
+	{
+		"Protocolo" : 1002,
+		"fk_Veiculo_Chassi" : "2HGBH41JXMN109187"
+	},
+	{
+		"Protocolo" : 1003,
+		"fk_Veiculo_Chassi" : "3HGBH41JXMN109188"
+	},
+	{
+		"Protocolo" : 1004,
+		"fk_Veiculo_Chassi" : "4HGBH41JXMN109189"
+	},
+	{
+		"Protocolo" : 1005,
+		"fk_Veiculo_Chassi" : "5HGBH41JXMN109190"
+	},
+	{
+		"Protocolo" : 1006,
+		"fk_Veiculo_Chassi" : "6HGBH41JXMN109191"
+	},
+	{
+		"Protocolo" : 1007,
+		"fk_Veiculo_Chassi" : "7HGBH41JXMN109192"
+	},
+	{
+		"Protocolo" : 1008,
+		"fk_Veiculo_Chassi" : "8HGBH41JXMN109193"
+	},
+	{
+		"Protocolo" : 1009,
+		"fk_Veiculo_Chassi" : "9HGBH41JXMN109194"
+	}
+]

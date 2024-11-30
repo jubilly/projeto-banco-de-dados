@@ -1,0 +1,27 @@
+[
+	{
+		"oficina_credenciada" : "Oficina A",
+		"nome" : "Peças X",
+		"telefone_whatsapp" : "11987654321"
+	},
+	{
+		"oficina_credenciada" : "Oficina B",
+		"nome" : "Peças Y",
+		"telefone_whatsapp" : "11976543210"
+	},
+	{
+		"oficina_credenciada" : "Oficina C",
+		"nome" : "Peças Z",
+		"telefone_whatsapp" : "11965432109"
+	},
+	{
+		"oficina_credenciada" : "Oficina D",
+		"nome" : "Peças W",
+		"telefone_whatsapp" : "11954321098"
+	},
+	{
+		"oficina_credenciada" : "Oficina E",
+		"nome" : "Peças V",
+		"telefone_whatsapp" : "11943210987"
+	}
+]

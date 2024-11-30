@@ -1,0 +1,112 @@
+[
+	{
+		"fk_Oficina_oficina_credenciada" : "Oficina A",
+		"fk_Ocorrencia_Protocolo" : 1001,
+		"data" : "2024-01-10",
+		"status" : "aguardando",
+		"motivo" : "Aguardando aprovação do cliente",
+		"oficina_credenciada" : "Oficina A",
+		"nome" : "Peças X",
+		"telefone_whatsapp" : "11987654321",
+		"protocolo" : null
+	},
+	{
+		"fk_Oficina_oficina_credenciada" : "Oficina A",
+		"fk_Ocorrencia_Protocolo" : 1006,
+		"data" : "2024-02-05",
+		"status" : "indisponivel",
+		"motivo" : "Técnicos em treinamento",
+		"oficina_credenciada" : "Oficina A",
+		"nome" : "Peças X",
+		"telefone_whatsapp" : "11987654321",
+		"protocolo" : null
+	},
+	{
+		"fk_Oficina_oficina_credenciada" : "Oficina B",
+		"fk_Ocorrencia_Protocolo" : 1002,
+		"data" : "2024-01-15",
+		"status" : "agendado",
+		"motivo" : "Reparo programado para a próxima semana",
+		"oficina_credenciada" : "Oficina B",
+		"nome" : "Peças Y",
+		"telefone_whatsapp" : "11976543210",
+		"protocolo" : null
+	},
+	{
+		"fk_Oficina_oficina_credenciada" : "Oficina B",
+		"fk_Ocorrencia_Protocolo" : 1007,
+		"data" : "2024-02-10",
+		"status" : "agendado",
+		"motivo" : "Inspeção inicial agendada",
+		"oficina_credenciada" : "Oficina B",
+		"nome" : "Peças Y",
+		"telefone_whatsapp" : "11976543210",
+		"protocolo" : null
+	},
+	{
+		"fk_Oficina_oficina_credenciada" : "Oficina C",
+		"fk_Ocorrencia_Protocolo" : 1003,
+		"data" : "2024-01-20",
+		"status" : "indisponivel",
+		"motivo" : "Peças em falta no estoque",
+		"oficina_credenciada" : "Oficina C",
+		"nome" : "Peças Z",
+		"telefone_whatsapp" : "11965432109",
+		"protocolo" : null
+	},
+	{
+		"fk_Oficina_oficina_credenciada" : "Oficina C",
+		"fk_Ocorrencia_Protocolo" : 1008,
+		"data" : "2024-02-15",
+		"status" : "disponivel",
+		"motivo" : "Preparado para começar os reparos",
+		"oficina_credenciada" : "Oficina C",
+		"nome" : "Peças Z",
+		"telefone_whatsapp" : "11965432109",
+		"protocolo" : null
+	},
+	{
+		"fk_Oficina_oficina_credenciada" : "Oficina D",
+		"fk_Ocorrencia_Protocolo" : 1004,
+		"data" : "2024-01-25",
+		"status" : "disponivel",
+		"motivo" : "Pronto para iniciar o serviço",
+		"oficina_credenciada" : "Oficina D",
+		"nome" : "Peças W",
+		"telefone_whatsapp" : "11954321098",
+		"protocolo" : null
+	},
+	{
+		"fk_Oficina_oficina_credenciada" : "Oficina D",
+		"fk_Ocorrencia_Protocolo" : 1009,
+		"data" : "2024-02-20",
+		"status" : "aguardando",
+		"motivo" : "Aguardando envio de peças",
+		"oficina_credenciada" : "Oficina D",
+		"nome" : "Peças W",
+		"telefone_whatsapp" : "11954321098",
+		"protocolo" : null
+	},
+	{
+		"fk_Oficina_oficina_credenciada" : "Oficina E",
+		"fk_Ocorrencia_Protocolo" : 1005,
+		"data" : "2024-01-30",
+		"status" : "aguardando",
+		"motivo" : "Aguardando confirmação do seguro",
+		"oficina_credenciada" : "Oficina E",
+		"nome" : "Peças V",
+		"telefone_whatsapp" : "11943210987",
+		"protocolo" : null
+	},
+	{
+		"fk_Oficina_oficina_credenciada" : "Oficina E",
+		"fk_Ocorrencia_Protocolo" : 1010,
+		"data" : "2024-02-25",
+		"status" : "agendado",
+		"motivo" : "Revisão completa programada",
+		"oficina_credenciada" : "Oficina E",
+		"nome" : "Peças V",
+		"telefone_whatsapp" : "11943210987",
+		"protocolo" : null
+	}
+]

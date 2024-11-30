@@ -54,7 +54,9 @@ CREATE TABLE Ocorrencia (
 CREATE TABLE Oficina (
     oficina_credenciada VARCHAR(40) PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
-    telefone_whatsapp VARCHAR(13)
+    telefone_whatsapp VARCHAR(13),
+    fk_Protocolo_ocorrencia INT NOT NULL,
+    FOREIGN KEY (fk_Protocolo_ocorrencia) REFERENCES Veiculo(Ocorrencia),
 );
 CREATE TABLE Contato (
     fk_Oficina_oficina_credenciada VARCHAR(40) NOT NULL,
@@ -360,14 +362,6 @@ VALUES (
         'A00010'
     );
 -- Insert data into Ocorrencia
-INSERT INTO Ocorrencia (
-        tipo_ocorrencia,
-        endereco_atual,
-        protocolo,
-        matriculaFuncionario,
-        participacao
-    )
-VALUES (
         'Acidente leve',
         'Rua A, 123',
         1001,
@@ -591,7 +585,7 @@ VALUES (
         'João da Silva',
         'Rua B, 123',
         '1HGBH41JXMN109186',
-        'A00001'
+        'F00001'
     ),
     (
         1002,
@@ -600,7 +594,7 @@ VALUES (
         'Maria Oliveira',
         'Rua C, 123',
         '2HGBH41JXMN109187',
-        'A00002'
+        'F00002'
     ),
     (
         1003,
@@ -609,7 +603,7 @@ VALUES (
         'Carlos Pereira',
         'Rua A, 123',
         '3HGBH41JXMN109188',
-        'A00003'
+        'F00003'
     ),
     (
         1004,
@@ -618,7 +612,7 @@ VALUES (
         'Ana Costa',
         'Rua D, 123',
         '4HGBH41JXMN109189',
-        'A00004'
+        'F00004'
     ),
     (
         1005,
@@ -627,7 +621,7 @@ VALUES (
         'Paulo Santos',
         'Rua F, 123',
         '5HGBH41JXMN109190',
-        'A00005'
+        'F00005'
     ),
     (
         1006,
@@ -636,7 +630,7 @@ VALUES (
         'Mariana Souza',
         'Rua G, 123',
         '6HGBH41JXMN109191',
-        'A00006'
+        'F00006'
     ),
     (
         1007,
@@ -645,7 +639,7 @@ VALUES (
         'Ricardo Lima',
         'Rua E, 123',
         '7HGBH41JXMN109192',
-        'A00007'
+        'F00007'
     ),
     (
         1008,
@@ -654,7 +648,7 @@ VALUES (
         'Fernanda Rocha',
         'Rua W, 123',
         '8HGBH41JXMN109193',
-        'A00008'
+        'F00008'
     ),
     (
         1009,
@@ -663,7 +657,7 @@ VALUES (
         'Lucas Silva',
         'Rua T, 123',
         '9HGBH41JXMN109194',
-        'A00009'
+        'F00009'
     ),
     (
         1010,
@@ -672,8 +666,10 @@ VALUES (
         'Juliana Almeida',
         'Rua F, 123',
         '0HGBH41JXMN109195',
-        'A00010'
+        'F00010'
     )
+
+-- Ocorrencias
 SELECT Veiculo.Chassi AS Chassi,
     Veiculo.Cor AS Cor,
     Veiculo.placa AS Placa,

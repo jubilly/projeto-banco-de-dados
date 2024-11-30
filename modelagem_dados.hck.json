@@ -292,7 +292,7 @@
           "parentRelationship": "148dc8d6-3fa4-42e7-a66b-ae013bce6413"
         },
         {
-          "name": "oficina",
+          "name": "oficinas",
           "hackoladeMeta": {},
           "isActivated": true,
           "type": "array",
@@ -695,7 +695,7 @@
     "d8830b1c-7d64-4b76-a426-27ef2082b3bf": "_id",
     "c4207285-711e-4e94-b646-9b474a542845": "funcionario_id",
     "148dc8d6-3fa4-42e7-a66b-ae013bce6413": "fk_Funcionario._id_to_ocorrencia.funcionario_id",
-    "3877597b-c014-4ef2-a78b-a0af6c421eb9": "oficina",
+    "3877597b-c014-4ef2-a78b-a0af6c421eb9": "oficinas",
     "7b86f703-8760-48d1-b3a4-27a774f46433": "fk_Oficina._id_to_ocorrencia.oficina.[0]"
   },
   "definitions": {
@@ -726,7 +726,7 @@
       "modelName": false
     }
   },
-  "lastModifTS": "2024-11-30T15:20:58.582Z",
+  "lastModifTS": "2024-11-30T15:33:58.586Z",
   "persistenceSchemaVersion": "7",
   "isCreatedByPlugin": true,
   "pluginInformation": {

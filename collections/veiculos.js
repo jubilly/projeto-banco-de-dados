@@ -1,7 +1,7 @@
 use asvic;
 
 db.veiculos.insertMany(
-  [[
+  [
     {
       "Chassi": "1HGBH41JXMN109186",
       "Cor": "Preto",

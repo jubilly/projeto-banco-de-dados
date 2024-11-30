@@ -267,7 +267,7 @@
           "error": {}
         },
         {
-          "name": "tipo_ocorencia",
+          "name": "tipo_ocorrencia",
           "hackoladeMeta": {},
           "isActivated": true,
           "type": "string",
@@ -321,7 +321,7 @@
       "code": "ocorrencia"
     },
     {
-      "collectionName": "FuncionarioSeguradora",
+      "collectionName": "Funcionario",
       "type": "object",
       "properties": [
         {
@@ -552,25 +552,25 @@
         "dataType": "",
         "shape": [
           {
-            "x": 965.9361111111107,
-            "y": 1112.1625000000017
+            "x": 1117.4361111111107,
+            "y": 996.6625000000017
           },
           {
-            "x": 930.4027777777778,
-            "y": 1112.1625000000017
+            "x": 1117.4361111111107,
+            "y": 971.6625000000017
           },
           {
-            "x": 930.4027777777778,
-            "y": 1123.762500000001
+            "x": 850.8694444444449,
+            "y": 971.6625000000017
           },
           {
-            "x": 894.8694444444449,
-            "y": 1123.762500000001
+            "x": 850.8694444444449,
+            "y": 1019.262500000001
           }
         ],
         "sides": [
-          "left",
-          "right"
+          "top",
+          "top"
         ]
       }
     }
@@ -591,11 +591,11 @@
     "bbd3f92f-9fc7-402c-ba6a-1e411e773405": "marca",
     "7a3d51c8-2d10-4d5d-a1e5-9a40fcb1133b": "Ocorrencia",
     "d2f4c56b-244f-4729-b68b-558d45ab975c": "protocolo",
-    "498fe05a-2477-45a4-a572-f81d23081a7e": "tipo_ocorencia",
+    "498fe05a-2477-45a4-a572-f81d23081a7e": "tipo_ocorrencia",
     "fef251f5-54ae-4927-885b-fdfca9f65b1c": "data_ocorrencia",
     "6d44cbd8-2975-4667-8fe3-6c69fc5db2b9": "individuo_envolvido",
     "85553ac1-31f7-4ca5-be9f-9ed4e9e89b09": "endereco_atual",
-    "cf9ec5f3-91da-405b-92cf-7ff885494db3": "FuncionarioSeguradora",
+    "cf9ec5f3-91da-405b-92cf-7ff885494db3": "Funcionario",
     "d1b6041b-9b7c-4cd7-ba03-afc404a6ab33": "documento",
     "cbfb2d3c-dd5f-4b8b-8b13-8f407ebea6e2": "matriculaFuncionario",
     "f40fe1ec-b365-458a-9236-9c2f6e9b4f5a": "nome",
@@ -650,7 +650,7 @@
       "modelName": false
     }
   },
-  "lastModifTS": "2024-11-29T22:25:50.971Z",
+  "lastModifTS": "2024-11-30T13:09:58.583Z",
   "persistenceSchemaVersion": "7",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -665,8 +665,8 @@
         "erd": [
           {
             "GUID": "d3325be6-9d38-4ed1-b7a0-178c3bbb01f2",
-            "x": 696.8694444444449,
-            "y": 1035.262500000001,
+            "x": 751.8694444444449,
+            "y": 1019.262500000001,
             "width": 198,
             "height": 177,
             "color": {
@@ -675,8 +675,8 @@
           },
           {
             "GUID": "61475983-45ca-440b-b450-f0367751ac03",
-            "x": 965.9361111111107,
-            "y": 987.6625000000017,
+            "x": 998.9361111111107,
+            "y": 996.6625000000017,
             "width": 237,
             "height": 249,
             "color": {
@@ -685,8 +685,8 @@
           },
           {
             "GUID": "7a3d51c8-2d10-4d5d-a1e5-9a40fcb1133b",
-            "x": 1367.0694444444448,
-            "y": 1058.0625000000005,
+            "x": 1293.9599794238686,
+            "y": 1031.435339506172,
             "width": 229,
             "height": 123,
             "color": {
@@ -695,8 +695,8 @@
           },
           {
             "GUID": "cf9ec5f3-91da-405b-92cf-7ff885494db3",
-            "x": 1322.0694444444446,
-            "y": 1306.7291666666665,
+            "x": 1291.0694444444446,
+            "y": 1230.7291666666665,
             "width": 253,
             "height": 105,
             "color": {
@@ -705,8 +705,8 @@
           },
           {
             "GUID": "09033229-1d69-47ad-bd04-95e95d4af469",
-            "x": 688.7361111111106,
-            "y": 1308.7291666666652,
+            "x": 728.641460905349,
+            "y": 1251.649331275718,
             "width": 226,
             "height": 87,
             "color": {
@@ -715,10 +715,10 @@
           },
           {
             "GUID": "b6b033b4-1335-4bc3-9cef-de288ae59d36",
-            "x": 974.4027777777786,
-            "y": 1308.729166666667,
-            "width": 283,
-            "height": 87,
+            "x": 983.4027777777786,
+            "y": 1273.729166666667,
+            "width": 279,
+            "height": 111,
             "color": {}
           }
         ],
@@ -730,8 +730,8 @@
         },
         "buckets": [
           {
-            "x": 648.7361111111106,
-            "y": 947.6625000000017,
+            "x": 688.641460905349,
+            "y": 931.6625000000017,
             "GUID": "6a051e05-568d-462f-9ae6-6054efd60974"
           }
         ],
@@ -753,7 +753,13 @@
         "diagramViews": [],
         "decorativeSymbols": [],
         "nestedCollectionsLayout": "horizontal",
-        "options": [],
+        "options": [
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "b6b033b4-1335-4bc3-9cef-de288ae59d36"
+          }
+        ],
         "relationshipUpdateDisabled": false
       },
       "collectionLevel": {},

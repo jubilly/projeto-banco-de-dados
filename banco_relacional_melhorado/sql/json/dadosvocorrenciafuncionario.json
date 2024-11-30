@@ -1,0 +1,122 @@
+[
+	{
+		"Protocolo" : 1001,
+		"tipo_ocorrencia" : "Acidente leve",
+		"data_ocorrencia" : "2024-11-01",
+		"individuo_envolvido" : "João da Silva",
+		"endereco_atual" : "Rua B, 123",
+		"fk_Veiculo_Chassi" : "1HGBH41JXMN109186",
+		"fk_Funcionario_matricula" : "F00001",
+		"matriculaFuncionario" : "F00001",
+		"nome" : "Roberto Martins",
+		"cpf" : "12312312301"
+	},
+	{
+		"Protocolo" : 1002,
+		"tipo_ocorrencia" : "Colisão traseira",
+		"data_ocorrencia" : "2024-11-02",
+		"individuo_envolvido" : "Maria Oliveira",
+		"endereco_atual" : "Rua C, 123",
+		"fk_Veiculo_Chassi" : "2HGBH41JXMN109187",
+		"fk_Funcionario_matricula" : "F00002",
+		"matriculaFuncionario" : "F00002",
+		"nome" : "Fernanda Lima",
+		"cpf" : "12312312302"
+	},
+	{
+		"Protocolo" : 1003,
+		"tipo_ocorrencia" : "Roubo de veículo",
+		"data_ocorrencia" : "2024-11-03",
+		"individuo_envolvido" : "Carlos Pereira",
+		"endereco_atual" : "Rua A, 123",
+		"fk_Veiculo_Chassi" : "3HGBH41JXMN109188",
+		"fk_Funcionario_matricula" : "F00003",
+		"matriculaFuncionario" : "F00003",
+		"nome" : "Lucas Pereira",
+		"cpf" : "12312312303"
+	},
+	{
+		"Protocolo" : 1004,
+		"tipo_ocorrencia" : "Batida em poste",
+		"data_ocorrencia" : "2024-11-04",
+		"individuo_envolvido" : "Ana Costa",
+		"endereco_atual" : "Rua D, 123",
+		"fk_Veiculo_Chassi" : "4HGBH41JXMN109189",
+		"fk_Funcionario_matricula" : "F00004",
+		"matriculaFuncionario" : "F00004",
+		"nome" : "Juliana Alves",
+		"cpf" : "12312312304"
+	},
+	{
+		"Protocolo" : 1005,
+		"tipo_ocorrencia" : "Danos na lataria",
+		"data_ocorrencia" : "2024-11-05",
+		"individuo_envolvido" : "Paulo Santos",
+		"endereco_atual" : "Rua F, 123",
+		"fk_Veiculo_Chassi" : "5HGBH41JXMN109190",
+		"fk_Funcionario_matricula" : "F00005",
+		"matriculaFuncionario" : "F00005",
+		"nome" : "Thiago Souza",
+		"cpf" : "12312312305"
+	},
+	{
+		"Protocolo" : 1006,
+		"tipo_ocorrencia" : "Furto de peças",
+		"data_ocorrencia" : "2024-11-06",
+		"individuo_envolvido" : "Mariana Souza",
+		"endereco_atual" : "Rua G, 123",
+		"fk_Veiculo_Chassi" : "6HGBH41JXMN109191",
+		"fk_Funcionario_matricula" : "F00006",
+		"matriculaFuncionario" : "F00006",
+		"nome" : "Camila Ferreira",
+		"cpf" : "12312312306"
+	},
+	{
+		"Protocolo" : 1007,
+		"tipo_ocorrencia" : "Vandalismo",
+		"data_ocorrencia" : "2024-11-07",
+		"individuo_envolvido" : "Ricardo Lima",
+		"endereco_atual" : "Rua E, 123",
+		"fk_Veiculo_Chassi" : "7HGBH41JXMN109192",
+		"fk_Funcionario_matricula" : "F00007",
+		"matriculaFuncionario" : "F00007",
+		"nome" : "André Nunes",
+		"cpf" : "12312312307"
+	},
+	{
+		"Protocolo" : 1008,
+		"tipo_ocorrencia" : "Pane elétrica",
+		"data_ocorrencia" : "2024-11-08",
+		"individuo_envolvido" : "Fernanda Rocha",
+		"endereco_atual" : "Rua W, 123",
+		"fk_Veiculo_Chassi" : "8HGBH41JXMN109193",
+		"fk_Funcionario_matricula" : "F00008",
+		"matriculaFuncionario" : "F00008",
+		"nome" : "Patricia Ramos",
+		"cpf" : "12312312308"
+	},
+	{
+		"Protocolo" : 1009,
+		"tipo_ocorrencia" : "Queda de árvore",
+		"data_ocorrencia" : "2024-11-09",
+		"individuo_envolvido" : "Lucas Silva",
+		"endereco_atual" : "Rua T, 123",
+		"fk_Veiculo_Chassi" : "9HGBH41JXMN109194",
+		"fk_Funcionario_matricula" : "F00009",
+		"matriculaFuncionario" : "F00009",
+		"nome" : "Ricardo Mendes",
+		"cpf" : "12312312309"
+	},
+	{
+		"Protocolo" : 1010,
+		"tipo_ocorrencia" : "Alagamento",
+		"data_ocorrencia" : "2024-11-10",
+		"individuo_envolvido" : "Juliana Almeida",
+		"endereco_atual" : "Rua F, 123",
+		"fk_Veiculo_Chassi" : "0HGBH41JXMN109195",
+		"fk_Funcionario_matricula" : "F00010",
+		"matriculaFuncionario" : "F00010",
+		"nome" : "Mariana Costa",
+		"cpf" : "12312312310"
+	}
+]

@@ -8,8 +8,14 @@ SELECT * FROM contato
 
 -- Dados gerados em JSON do contato para a coleção Ocorrencia (arquivo dadosocorrenciacontato.json)
 
-SELECT * FROM ocorrencia
-	INNER JOIN contato.fk_Ocorrencia_Procolo ON ocorrencia.Protocolo;
+SELECT * FROM Ocorrencia 
+INNER JOIN Funcionario ON ocorrencia.fk_Funcionario_matricula = funcionario.matriculaFuncionario;
+
+-- Dados gerados em JSON do funcionario para a coleção Ocorrencia (arquivo dadosocorrenciacontato.json)
+
+SELECT * FROM veiculo
+	INNER JOIN modelo ON veiculo.fk_Modelo_codModelo = modelo.codModelo
+    INNER JOIN marca ON modelo.fk_Marca_codMarca = marca.codMarca;
 
 -- Dados gerados em JSON para a coleção funcionário (arquivo dadosfuncionario.json)
 
